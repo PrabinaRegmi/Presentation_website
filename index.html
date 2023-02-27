@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Presentation Website</title>
+</head>
+
+<body>
+    <!-- Page 1(Intro) -->
+    <section id="page-1" class="page">
+        <h1>Welcome To My Presentation</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe quidem dolorem voluptas, amet
+            incidunt illo itaque ut ullam reprehenderit accusamus et illum porro distinctio ab, praesentium suscipit
+            impedit cum quis earum beatae esse sint, voluptates iste. Nam, blanditiis tenetur.</p>
+        <div>
+            <a class="btn" href="#page-2">Next Page <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+    <!-- Page 2 -->
+    <section id="page-2" class="page">
+        <h1>Page 2</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe quidem dolorem voluptas, amet
+            incidunt illo itaque ut ullam reprehenderit accusamus et illum porro distinctio ab, praesentium suscipit
+            impedit cum quis earum beatae esse sint, voluptates iste. Nam, blanditiis tenetur.</p>
+        <div>
+            <a class="btn btn-dark" href="#page-1">Previous Page <i class="fas fa-arrow-circle-up"></i></a>
+
+            <a class="btn" href="#page-3">Next Page <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+    <!-- Page 3 -->
+    <section id="page-3" class="page">
+        <h1>Page 3</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe quidem dolorem voluptas, amet
+            incidunt illo itaque ut ullam reprehenderit accusamus et illum porro distinctio ab, praesentium suscipit
+            impedit cum quis earum beatae esse sint, voluptates iste. Nam, blanditiis tenetur.</p>
+        <div>
+            <a class="btn btn-dark" href="#page-2">Previous Page <i class="fas fa-arrow-circle-up"></i></a>
+
+            <a class="btn" href="#page-4">Next Page <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+    <!-- Page 4 -->
+    <section id="page-4" class="page">
+        <h1>Page 4</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe quidem dolorem voluptas, amet
+            incidunt illo itaque ut ullam reprehenderit accusamus et illum porro distinctio ab, praesentium suscipit
+            impedit cum quis earum beatae esse sint, voluptates iste. Nam, blanditiis tenetur.</p>
+        <div>
+            <a class="btn " href="#page-3">Previous Page <i class="fas fa-arrow-circle-up"></i></a>
+        </div>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        $(".btn").on("click", function (e) {
+            if (this.hash !== "") {
+                e.preventDefault();
+                const hash = this.hash;
+                $("html, body").animate(
+                    {
+                    scrollTop: $(hash).offset().top
+                }, 
+                800
+                );
+            };
+        });
+    </script>
+</body>
+
+</html>
